@@ -1,0 +1,4 @@
+postinstall:
+  message:
+    gen_fsm generated
+cwd: true
