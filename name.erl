@@ -6,8 +6,8 @@
 	]).
 
 -export([
-	 initial_state/3,
-	 initial_state/4
+	 initial_state/2,
+	 initial_state/3
 	]).
 
 -export([
