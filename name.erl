@@ -14,9 +14,9 @@
 	 init/1,
 	 handle_event/3,
 	 handle_sync_event/4,
-	 handle_info/2,
-	 terminate/2,
-	 code_change/3
+	 handle_info/3,
+	 terminate/3,
+	 code_change/4
 	]).
 
 start_link() ->
@@ -35,10 +35,10 @@ handle_sync_event(_Event, _From, StateName, StateData) ->
   Reply = ok,
   {next_state, Reply, StateName, StateData}.
 
-handle_info(_Info, SateName, StateData) ->
-  {next_state, StateName, StateDate}.
+handle_info(_Info, StateName, StateData) ->
+  {next_state, StateName, StateData}.
 
-terminate(_Reason, _StateName, _StateDate) ->
+terminate(_Reason, _StateName, _StateData) ->
   ok.
 
 code_change(_OldVersion, StateName, StateData, _Extra) ->
